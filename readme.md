@@ -1,11 +1,11 @@
 # Projeto
 
-Números primos
+    Número primo
 
 ## Objetivo
 
-ir mostrando todos os números primos até o infinito e além
+    Verificar se o número enviado é primo ou não
 
-## Status
+    http://localhost:${port}/prim/${number}
 
-Não funcionou porra nenhuma nesse carai, falta corrigir
+    O objeto a ser retornado contém o número enviado, todos os divisíveis e se é ou não um número primo
