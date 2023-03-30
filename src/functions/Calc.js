@@ -2,7 +2,10 @@ export default class Calc {
 
     #num
 
-    constructor(num) { this.#num = num }
+    constructor(num) {
+        if(num < 1 || num > 2147483647) throw new RangeError('Valor fora dos limites') // 32 bits
+        this.#num = num
+    }
 
     check = () => {
         let cond = 1

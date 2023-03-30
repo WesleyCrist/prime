@@ -1,11 +1,30 @@
-# Projeto
+# Número primo
 
-    Número primo
+    de acordo com o número enviado na requisição, o app retornará se o mesmo é primo ou não, juntamente com seus divisíveis.
 
-## Objetivo
+## Utilização
 
-    Verificar se o número enviado é primo ou não
-
+    <!-- ip da aplicação -->
     http://localhost:${port}/prim/${number}
 
-    O objeto a ser retornado contém o número enviado, todos os divisíveis e se é ou não um número primo
+    rota /prim seguida com número que será verificado
+
+### Exemplo
+
+    http://localhost:8081/prim/11
+
+    Resposta
+
+        {
+	        "sent": 11,
+	        "divisible": [
+		        1,
+		        11
+	        ],
+	        "cousin": "11 is it cousin? true"
+        }
+
+## Regras
+
+    O número a ser verificado não deve ser maior que 2147483647, ou seja, 32 bits
+    O número a ser enviado não deve ser negativo ou ser zero

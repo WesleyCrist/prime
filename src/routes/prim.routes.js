@@ -14,8 +14,14 @@ prim.get('/:number?', (req, res) => {
     } else {
         num = Number(num)
         if(!isNaN(num)) {
-            const calc = new Calc(num)
-            res.status(200).send(calc.check())
+            try {
+                const calc = new Calc(num)
+                res.status(200).send(calc.check())
+            } catch(e) {
+                res.status(412).send({
+                    msg: e.message
+                })
+            }
         } else {
             res.status(412).send({
                 msg: 'only numbers'
