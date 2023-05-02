@@ -3,7 +3,7 @@ export default class Calc {
     #num
 
     constructor(num) {
-        if(num < 1 || num > 2147483647) throw new RangeError('Valor fora dos limites') // 32 bits
+        if(num < 1 || num > 2147483647) throw new RangeError('outside acceptable limits') // 32 bits
         this.#num = num
     }
 

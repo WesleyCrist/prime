@@ -5,10 +5,8 @@ const prim = express()
 
 prim.get('/:number?', (req, res) => {
     let num = req.params.number
-    // console.log(num)
-    // console.log(typeof(num))
     if(typeof(num) === 'undefined') {
-        res.status(204).send({
+        res.status(406).send({
             msg: 'number not informed'
         })
     } else {

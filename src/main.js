@@ -1,9 +1,11 @@
 import express from 'express'
 import grouping from './routes/grouping.js'
+const dot = await import('dotenv')
 
 const main = express()
-const port = 8081
+dot.config()
 
 main.use(grouping)
 
-main.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`))
+main.listen(process.env.PORT, () => console.log(`server running at http://localhost:${process.env.PORT}`))
+process.env
